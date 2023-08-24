@@ -3,3 +3,4 @@
 
 # Hugo
 *.lock
+public/*

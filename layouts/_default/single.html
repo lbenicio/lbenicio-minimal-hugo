@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body class="bg-body d-flex flex-column min-vh-100 {{ if .Date }} body-posts {{ end }}">
+    {{ partial "fork.html" . }}
+    {{ partial "header.html" . }}
+    {{ if or (strings.Contains .Title "blog") (strings.Contains .Title "post") (strings.Contains .Title "feed") (strings.Contains .Title "tag") (strings.Contains .Title "categor")
+    (.Date) }}{{ partial "blog-navigation.html" . }}{{ end }}
+    <div class="container-fluid mt-2">
+        <div class="row">
+            <div class="offset-xs-1 col-xs-10 offset-sm-3 col-sm-6">
+                <section class="content">
+                    <div class="container-fluid" id="main-container">
+                        {{ .Content }}
+                        {{ if or (strings.Contains .Title "blog") (strings.Contains .Title "feed") (strings.Contains .Title "tag") (strings.Contains .Title "categor") }}{{
+                        partial "pagination.html" . }}{{ end }}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    {{ partial "footer.html" . }}
+    {{ partial "analytics.html" . }}
+</body>
+
+</html>
