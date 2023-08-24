@@ -1,0 +1,144 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+
+#main-container {
+    overflow-wrap: break-word;
+}
+
+#main-container h1 {
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+}
+
+#main-container table td {
+    padding-right: 1em;
+}
+
+.fork-me {
+    width: 13rem;
+    right: 0;
+    position: fixed;
+    z-index: 999;
+    top: 10rem;
+    border: 1rem solid black;
+}
+
+a.fork-me:link,
+a.fork-me:visited,
+a.fork-me:hover,
+a.fork-me:active,
+a.post-link:link,
+a.post-link:visited,
+a.post-link:hover,
+a.post-link:active,
+a.pagination-nav:link,
+a.pagination-nav:visited,
+a.pagination-nav:hover,
+a.pagination-nav:active,
+a.nav-blog-links:link,
+a.nav-blog-links:visited,
+a.nav-blog-links:hover,
+a.nav-blog-links:active {
+    text-decoration: none;
+}
+
+nav>ul,
+ul.post-list {
+    list-style: none;
+}
+
+.h-main {
+    height: 80vh;
+}
+
+.fs-10 {
+    font-size: 0.5rem;
+}
+
+div.nav-container-up:before{
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #f8f9fa;
+    width: 20px;
+    transform: rotate(45deg);
+    transform-origin: 0% 0%;
+    left: calc(50% - 1px);
+    margin-top: -1.8em;
+    flex: 1;
+    background-color: white;
+    height: 20px;
+}
+
+div.nav-container-up:after{
+    content:"";
+    position:absolute;
+    border-bottom:1px solid #f8f9fa;
+    width:20px;
+    transform: rotate(45deg);
+    transform-origin: 0% 0%;
+    left: calc(50% + 1px);
+    margin-top: -1em;
+}
+
+div.nav-container-down:before{
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #f8f9fa;
+    width: 20px;
+    transform: rotate(45deg);
+    transform-origin: 0% 0%;
+    left: calc(50% - 1px);
+    margin-top: 2.7em;
+    flex: 1;
+    background-color: white;
+    height: 20px;
+}
+
+div.nav-container-down:after{
+    content:"";
+    position:absolute;
+    border-bottom:1px solid #f8f9fa;
+    width:20px;
+    transform: rotate(45deg);
+    transform-origin: 0% 0%;
+    left: calc(50% + 1px);
+    margin-top: 3.4em;
+}
+
+.mr-auto {
+    margin-right: auto !important;
+}
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+#main-container .pagination {
+    justify-content: space-evenly;
+    padding-top: 1.5rem;
+}
+
+#main-container .pagination li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#main-container .pagination .selected {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+@media (max-width: 576px) {
+    .fork-me {
+        width: 3rem;
+    }
+
+    .h-main {
+        height: 70vh;
+    }
+}

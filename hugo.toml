@@ -1,0 +1,8 @@
+# Theme config.
+homepage = "http:/localhost:1313/"
+
+title = "test"
+description = "Leonardo Benicio personal blog"
+
+github = "lbenicio"
+twitter = "lbenicio_"
