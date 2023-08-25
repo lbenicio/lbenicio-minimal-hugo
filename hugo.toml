@@ -5,11 +5,15 @@ contentdir = "content"
 
 
 [params]
+    homepage = "http://localhost:1313/"
+    description = "Leonardo Benicio personal blog"
+    home = "/"
+    blog = "https://blog.lbenicio.dev"
+    email = "hello@lbenicio.dev"
     github = "lbenicio"
     twitter = "lbenicio_"
     linkedin = "leonardo-benicio-1a55a1ba"
     mastodon = "lbenicio"
-    description = "Leonardo Benicio personal blog"
-    homepage = "http://localhost:1313/"
-    home = "/"
-    blog = "https://blog.lbenicio.dev"
+    keybase = "lbenicio"
+    reddit = "lbenicio_"
+    
