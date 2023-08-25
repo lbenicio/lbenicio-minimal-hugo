@@ -1,19 +1,18 @@
 # Theme config.
 languageCode = 'en-us'
-title = "lbenicio"
+title = "test"
 contentdir = "content"
-
+baseURL = "http://localhost:1313/"
 
 [params]
-    homepage = "http://localhost:1313/"
-    description = "Leonardo Benicio personal blog"
+    description = "test personal blog"
     home = "/"
-    blog = "https://blog.lbenicio.dev"
-    email = "hello@lbenicio.dev"
-    github = "lbenicio"
-    twitter = "lbenicio_"
-    linkedin = "leonardo-benicio-1a55a1ba"
-    mastodon = "lbenicio"
-    keybase = "lbenicio"
-    reddit = "lbenicio_"
+    blog = "https://blog.test.com"
+    email = "test@test.com"
+    github = "test"
+    twitter = "test"
+    linkedin = "test"
+    mastodon = "test"
+    keybase = "test"
+    reddit = "test"
     
