@@ -1,4 +1,4 @@
-<meta content='{{ .Site.Params.title }}' property='og:title' />
+<meta content='{{ .Site.Title }}' property='og:title' />
 <!-- favicon -->
 <link href="/favicon.ico" rel='shortcut icon'>
 <!-- CSS -->
@@ -18,30 +18,30 @@
 <meta content='{{ $.Site.BaseURL }}' property='og:url' />
 <meta content="{{ .Content | plainify | truncate 120 }}" property='og:description' />
 <meta content="article" property="og:type" />
-<meta content='{{ .Title }} - {{ .Site.Params.title }}'  property='og:title' />
-<title>{{ .Title }} - {{ .Site.Params.title }}</title>
+<meta content='{{ .Title }} - {{ .Page.Params.title }}'  property='og:title' />
+<title>{{ .Title }} - {{ .Page.Params.title }}</title>
 {{ else if and .Permalink "autopage_collection" }}
-<title>{{ .Title }} - {{ .Site.Params.title }}</title>
-<meta content='{{ .Site.Params.title }}' property='og:title' />
-<meta content='{{ .Site.BaseURL }}' property='og:url' />
-<meta content="{{ .Site.Params.description }}" property='og:description' />
-<meta content="blog" property="og:type" />
-{{ else if and .Permalink "/tag/" }}
-<title>{{ .Title }} - {{ .Site.Params.title }}</title>
-<meta content='{{ .Site.Params.title }}' property='og:title' />
-<meta content='{{ .Site.BaseURL }}' property='og:url' />
-<meta content="{{ .Site.Params.description }}" property='og:description' />
-<meta content="blog" property="og:type" />
-{{ else if and .Permalink "/category/" }}
-<title>{{ .Title }} - {{ .Site.Params.title }}</title>
-<meta content='{{ .Site.Params.title }}' property='og:title' />
-<meta content='{{ .Site.BaseURL }}' property='og:url' />
-<meta content="{{ .Site.Params.description }}" property='og:description' />
-<meta content="blog" property="og:type" />
-{{ else }}
-<title>{{ .Site.Title }}</title>
+<title>{{ .Title }} - {{ .Page.Params.title }}</title>
 <meta content='{{ .Site.Title }}' property='og:title' />
 <meta content='{{ .Site.BaseURL }}' property='og:url' />
 <meta content="{{ .Site.Params.description }}" property='og:description' />
-<meta content="blog" property="og:type" />
+{{ else if and .Permalink "/tag/" }}
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+<meta content='{{ .Site.Title }}' property='og:title' />
+<meta content='{{ .Site.BaseURL }}' property='og:url' />
+<meta content="{{ .Site.Params.description }}" property='og:description' />
+{{ else if and .Permalink "/category/" }}
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+<meta content='{{ .Site.Title }}' property='og:title' />
+<meta content='{{ .Site.BaseURL }}' property='og:url' />
+<meta content="{{ .Site.Params.description }}" property='og:description' />
+{{ else }}
+<title>{{ .Site.Title }}</title>
+<meta content='{{ .Site.Title }}' property='og:title' />
+<meta content="{{ .Site.BaseURL }}" property='og:url' />
+<meta content="{{ .Site.Params.description }}" property='og:description' />
+
+
+{{ .Site.BaseURL }}
 {{ end }}
+<meta content="blog" property="og:type" />
